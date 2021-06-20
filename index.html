@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <script src="mdchat.js"></script>
+    </script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/mdui@1.0.1/dist/css/mdui.min.css" integrity="sha384-cLRrMq39HOZdvE0j6yBojO4+1PrHfB7a9l5qLcmRm/fiWXYY+CndJPmyu5FV/9Tw" crossorigin="anonymous" />
+    <script src="https://cdn.jsdelivr.net/npm/mdui@1.0.1/dist/js/mdui.min.js" integrity="sha384-gCMZcshYKOGRX9r6wbDrvF+TcCCswSHFucUzUPwka+Gr+uHgjlYvkABr95TCOz3A" crossorigin="anonymous"></script>
+    <style>
+        .mdchat-container svg {
+            fill: #4f4f4f;
+            vertical-align: middle;
+            cursor: pointer
+        }
+        
+        .m d-section {
+            display: flex;
+            margin: 15px 0
+        }
+        
+        .mdchat-form,
+        .mdchat-comment {
+            flex: 1;
+            margin-left: 15px;
+            overflow: hidden
+        }
+        
+        .mdchat-form-inputs {
+            display: flex
+        }
+        
+        .mdchat-form-inputs>input,
+        .mdchat-textarea {
+            outline: 0;
+            width: 100%;
+            font: inherit;
+            transition: all .3s
+        }
+        
+        .mdchat-form-inputs>input:focus,
+        .mdchat-form-inputs>input {
+            padding: 7px;
+            margin-left: 10px
+        }
+        
+        .mdchat-form-inputs>input:first-child {
+            margin: 0
+        }
+        
+        .mdchat-textarea {
+            margin: 10px 0;
+            padding: 10px;
+            min-height: 80px;
+            max-height: 300px;
+            overflow: auto
+        }
+        
+        .mdchat-textarea:empty::before,
+         ::placeholder {
+            content: attr(placeholder);
+            color: #fff
+        }
+        
+        .mdchat-controls {
+            display: flex
+        }
+        
+        .mdchat-badge {
+            flex: 1
+        }
+        
+        .mdchat-badge>a:first-child {
+            margin-right: 10px
+        }
+        
+        .mdchat-controls button {
+            color: #fff;
+            font-size: .95em
+        }
+        
+        .mdchat-profile a {
+            color: #323232;
+            font-weight: 700
+        }
+        
+        .mdchat-markdown img {
+            max-width: 90%
+        }
+    </style>
+</head>
+
+<body class="mdui-theme-primary-indigo mdui-theme-accent-pink mdui-theme-layout-auto">
+    <div class="mdui-toolbar mdui-color-theme">
+        <span class="mdui-typo-title">MDCHAT demo</span>
+        <div class="mdui-toolbar-spacer"></div>
+    </div>
+    <div id="example1-tab1" class="mdui-p-a-2">
+        <div class="mdui-container">
+            <div id="pagetalk"></div>
+        </div>
+        <script>
+            new PageTalk({
+                container: '#pagetalk',
+                appId: 'R3x7LAs40xlgclldaMpjb30w-gzGzoHsz',
+                appKey: 'ugLGEqaqoV5KF5hCFMXcrKYY'
+            })
+        </script>
+    </div>
+</body>
+
+</html>
