@@ -29,9 +29,9 @@ class PageTalk {
         <div class="mdchat-section">
         <div class="mdchat-form">
         <div class="mdchat-form-inputs">
-        <input type="text" id="mdchat-nickname" value="${user.nickname}" maxlength="20" placeholder="昵称" class="mdui-textfield-input" type="email">
-        <input type="text" id="mdchat-email" value="${user.email}" maxlength="20" placeholder="邮箱" class="mdui-textfield-input">
-        <input type="text" id="mdchat-website" value="${user.website}" maxlength="20" placeholder="网站" class="mdui-textfield-input">
+        <input type="text" id="mdchat-nickname" value="${user.nickname}" maxlength="20" placeholder="神奇代码岛昵称" class="mdui-textfield-input" type="email">
+        <input type="text" id="mdchat-email" value="${user.email}" maxlength="20" placeholder="编程猫昵称" class="mdui-textfield-input">
+        <input type="text" id="mdchat-website" value="${user.website}" maxlength="20" placeholder="邮箱（没有不填）" class="mdui-textfield-input">
         </div>
         <div class="mdchat-textarea mdui-textfield-input" placeholder="请输入内容" contenteditable="plaintext-only">
         </div>
@@ -153,20 +153,11 @@ class PageTalk {
         if (!comment.nickname) {
             return '昵称不能为空'
         }
-        if (comment.nickname.match(/[\<\>]+/)) {
-            return '昵称不能包含尖括号'
-        }
-        if (comment.email && !comment.email.match(this.emailReg)) {
-            return '邮箱格式有误'
-        }
-        if (comment.website && !comment.website.match(this.urlReg)) {
-            return '网站格式有误'
-        }
         if (!comment.content) {
             return '发言内容不能为空'
         }
-        if (comment.content.length > 2000) {
-            return ' 2000 字限制'
+        if (comment.content.length > 20) {
+            return ' 20 字限制'
         }
         return true
     }
